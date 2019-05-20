@@ -71,8 +71,12 @@ if __name__ == '__main__':
     # Creates a new device based on the inputted information
     device = create_dev(hostname, facility, os)
     print(device.id)
+
+    # Prints the currently available devices
     print("Devices currently available:")
     list_dev()
+
+    # Deletes the device and outputs the currently available devices
     device.delete()
     print("Devices currently available:")
     list_dev()
