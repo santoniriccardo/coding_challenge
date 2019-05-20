@@ -47,8 +47,7 @@ def list_dev():
     devices = manager.list_devices(project_id='ca73364c-6023-4935-9137-2132e73c20b4')
     for device in devices:
         print(device)
-        device.update()
-        device.delete()
+
 
 
 # Main function where user can decide what to do
@@ -72,4 +71,8 @@ if __name__ == '__main__':
     # Creates a new device based on the inputted information
     device = create_dev(hostname, facility, os)
     print(device.id)
+    print("Devices currently available:")
+    list_dev()
+    device.delete()
+    print("Devices currently available:")
     list_dev()
